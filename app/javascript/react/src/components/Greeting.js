@@ -1,37 +1,30 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchGreeting } from '../actions/greetingActions';
+import { fetchGreetings } from '../redux/greetings/greetingsSlice';
 
 const Greeting = () => {
-    const { greeting, isLoading, error } = useSelector(state => state.greeting);
-    const dispatch = useDispatch();
-    
-    useEffect(() => {
-        dispatch(fetchGreeting());
-    }, [dispatch]);
+  const { greeting, isLoading, error } = useSelector(state => state.greetings);
+  const dispatch = useDispatch();
 
-    if (isLoading) {
-        return (
-          <>
-            <div className="loading">...isLoading</div>
-          </>
-        );
-      }
-    
-      if (error) {
-        return (
-          <>
-            <div className="loading">
-              Something is wrong during fetching the data
-            </div>
-          </>
-        );
-      }
+  useEffect(() => {
+    dispatch(fetchGreetings());
+  }, [dispatch]);
 
-      return (
-        <>
-          <div className="greeting">{greeting.message}</div>
-        </>)
-}
+  if (isLoading) {
+    return (
+      <div className="loading">Loading...</div>
+    );
+  }
 
-export default Greeting
+  if (error) {
+    return (
+      <div className="error">Error: {error}</div>
+    );
+  }
+
+  return (
+    <div className="greeting">{greeting}</div>
+  );
+};
+
+export default Greeting;
