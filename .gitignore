@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+node_modules
 
 # Ignore all environment files (except templates).
 /.env*
@@ -38,4 +39,11 @@
 !/app/assets/builds/.keep
 
 /node_modules
-node_modules/
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+railsapp.zip

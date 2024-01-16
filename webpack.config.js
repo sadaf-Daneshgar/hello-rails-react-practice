@@ -1,29 +1,40 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
 
 module.exports = {
-  mode: 'production',
-  devtool: 'source-map',
+  mode: "development",
+  devtool: "source-map",
   entry: {
-    application: './app/javascript/application.js',
+    application: "./app/javascript/packs/application.js"
   },
+  
+    resolve: {
+      fallback: {
+        fs: false
+      }
+    },
+  
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test:  /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       },
-    ],
+      // ... other rules
+    ]
   },
   output: {
-    filename: '[name].js',
-    sourceMapFilename: '[name].js.map',
-    path: path.resolve(__dirname, 'app/assets/builds'),
+    filename: "[name]-[contenthash].js",
+    sourceMapFilename: "[file].map",
+    path: path.resolve(__dirname, "public/packs"),
+    publicPath: "/packs/",
   },
-  plugins: [
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1,
-    }),
-  ],
+  
+  // Remove the 'node' configuration block entirely
+  // No longer add polyfills or mocks for Node.js stuff automatically
 };

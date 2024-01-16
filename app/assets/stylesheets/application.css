@@ -1,49 +1,15 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
-}
-
-.loading {
-  border: 1px solid #0e9594;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 220px 190px 20px 190px;
-}
-
-.title {
-  text-align: center;
-  color: #3a3a3a;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.greeting {
-  text-align: center;
-  color: #3a3a3a;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-button {
-  display: block;
-  width: 200px;
-  height: 50px;
-  margin: 20px auto;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
