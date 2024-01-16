@@ -3,23 +3,22 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchGreetings = createAsyncThunk(
     'greetings/fetchGreetings',
     async () => {
-      try {
         const response = await fetch('/api/greetings/random');
+        if (!response.ok) {
+            throw new Error('Failed to fetch.');
+        }
         const data = await response.json();
         return data.greeting;
-      } catch (error) {
-        throw Error('Error fetching greetings');
-      }
-    }
+    },
 );
 
 const initialState = {
-    greetings: '',
+    greeting: '',
     isLoding: false,
     error: null
 };
 
-const GreetingsSlice = createSlice({
+const greetingsSlice = createSlice({
     name: 'greetings',
     initialState,
     reducers: {},
@@ -30,8 +29,9 @@ const GreetingsSlice = createSlice({
                 state.error = null;
             })
             .addCase(fetchGreetings.fulfilled, (state, action) => {
+                state.greeting = action.payload;
                 state.isLoding = false;
-                state.greetings = action.payload;
+                state.error = null;
             })
             .addCase(fetchGreetings.rejected, (state, action) => {
                 state.isLoding = false;
@@ -40,4 +40,4 @@ const GreetingsSlice = createSlice({
     }
 })
 
-export default GreetingsSlice.reducer;
+export default greetingsSlice.reducer;

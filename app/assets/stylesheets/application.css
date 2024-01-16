@@ -4,9 +4,46 @@
   box-sizing: border-box;
 }
 
+.App {
+  text-align: center;
+}
+
+.loading {
+  border: 1px solid #0e9594;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 220px 190px 20px 190px;
+}
+
+.title {
+  text-align: center;
+  color: #3a3a3a;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
 .greeting {
   text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  margin-top: 100px;
+  color: #3a3a3a;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }

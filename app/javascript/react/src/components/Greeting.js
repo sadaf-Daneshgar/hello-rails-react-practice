@@ -10,20 +10,34 @@ const Greeting = () => {
     dispatch(fetchGreetings());
   }, [dispatch]);
 
+  const handleClick = () => {
+    dispatch(fetchRandomGreeting());
+  };
+
   if (isLoading) {
     return (
-      <div className="loading">Loading...</div>
+      <>
+        <div className="loading">...isLoading</div>
+      </>
     );
   }
 
   if (error) {
     return (
-      <div className="error">Error: {error}</div>
+      <>
+        <div className="loading">
+          Something is wrong during fetching the data
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="greeting">{greeting}</div>
+    <>
+      <div className="title">Random Greeting</div>
+      <div className="greeting">{greeting}</div>
+      <button type="button" onClick={handleClick}>Get new greeting</button>
+    </>
   );
 };
 
