@@ -149,8 +149,6 @@ If you like this project, kindly drop a start ⭐️ for the [repository](https:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 **I would like to thank the following individuals and organizations for their contribution to this project.**
