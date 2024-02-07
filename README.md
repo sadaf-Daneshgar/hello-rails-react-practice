@@ -136,6 +136,7 @@ Open your web browser and go to http://localhost:3000 to access the Budget App.
 - 👤 Twitter: [@SadafDaneshgar](https://twitter.com/SadafDaneshgar)
 - 👤 LinkedIn: [Sadaf Daneshgar](https://www.linkedin.com/in/sadaf-daneshgar-2002saba/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
