@@ -1,7 +1,5 @@
 <h1 align="center">Hello Rails React👋</h1>
 
-## 📗 Table of Contents
-
 - [👋 Hello Rails React](#about-project)
 - [🛠 Built With](#built-with)
 - [Key Features](#key-features)
