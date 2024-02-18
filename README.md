@@ -49,7 +49,6 @@
 - [ ] Creating a React app
 - [ ] Connecting the React app to the Rails API
 - [ ] Creating a React component
-- [ ] Using React hooks
 
 <ul>
   <li>HTML & CSS3</li>
