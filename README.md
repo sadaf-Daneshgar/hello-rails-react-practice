@@ -143,7 +143,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the issues [page](https://github.com/sadaf-Daneshgar/hello-rails-react/issues) and contribute to the project.
 
 ## ⭐️ Show Your Support <a name="support"></a>
-If you like this project, kindly drop a start ⭐️ for the [repository](https://github.com/sadaf-Daneshgar/hello-rails-react);
+If you like this project, kindly drop a start ⭐️ for the repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
